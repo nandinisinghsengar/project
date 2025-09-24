@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calendar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #calendar {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Simple Calendar</h1>
+<div id="calendar">Loading date...</div>
+
+<script>
+  function showCalendar() {
+    const today = new Date();
+    const date = today.getDate();
+    const month = today.getMonth() + 1;  // Month starts from 0
+    const year = today.getFullYear();
+    
+    var formattedDate = date +" /"+ month +" / "+year;
+    
+    document.getElementById('calendar').innerText = "Today is: " + formattedDate;
+  }
+
+  window.onload = showCalendar;
+</script>
+
+</body>
+</html>
